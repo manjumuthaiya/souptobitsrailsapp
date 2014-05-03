@@ -1,3 +1,52 @@
 // Place all the styles related to the Categories controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$bgcolor : #3f2860;
+$linkcolor: #add2c5;
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+body {
+	background-color: $bgcolor;
+}
+@font-face
+
+{
+font-family: MyCustomBebas;
+src: url("BebasNeue Regular.ttf") /* TTF file for CSS3 browsers */
+}
+@font-face
+
+{
+font-family: MyLightBebas;
+src: url("BebasNeue Light.otf") /* TTF file for CSS3 browsers */
+}
+
+h1 {
+	color: #ef6d3b;
+	font-family: "MyCustomBebas";
+	font-size: 3em;
+	text-align: center;
+}
+
+.content {
+	@include border-radius(10px);
+	border: 1px solid lighten($bgcolor, 50%);
+	position: relative;
+	width: 50%;
+	height: auto;
+	left: 30%;
+	padding-left:5%;
+	background-color:lighten($bgcolor, 10%);
+	a{
+		font-family: "MyLightBebas";
+		font-style: bold;
+		font-size: 1 em;
+		color: $linkcolor;
+		text-decoration: none;
+	};
+}
+
